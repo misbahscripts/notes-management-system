@@ -1,0 +1,22 @@
+/* website/static/css/style.css */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fef6f9;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    border-radius: 12px;
+}
+
+.heading {
+    color: #ff4e88;
+    font-size: 2rem;
+}

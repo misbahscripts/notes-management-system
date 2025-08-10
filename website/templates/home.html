@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4 text-primary">Welcome</h1>
+    <p class="lead">Let’s manage your notes.</p>
+
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('views.notes') }}" class="btn btn-success mt-3">My Notes</a>
+        <a href="{{ url_for('auth.logout') }}" class="btn btn-outline-danger mt-3 ms-2">Logout</a>
+    {% else %}
+        <a href="{{ url_for('auth.login') }}" class="btn btn-outline-dark mt-3">Login</a>
+        <a href="{{ url_for('auth.signup') }}" class="btn btn-outline-primary mt-3 ms-2">Register</a>
+    {% endif %}
+</div>
+{% endblock %}
