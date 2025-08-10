@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_login import LoginManager
 from .models import db, User
@@ -6,7 +7,7 @@ def create_app():
     app = Flask(__name__)
 
     # 🛡️ Config
-    app.config['SECRET_KEY'] = 'fuckinghelooow'
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
